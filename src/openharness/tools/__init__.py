@@ -20,6 +20,7 @@ from openharness.tools.file_read_tool import FileReadTool
 from openharness.tools.file_write_tool import FileWriteTool
 from openharness.tools.glob_tool import GlobTool
 from openharness.tools.grep_tool import GrepTool
+from openharness.tools.index_explore_tool import IndexExploreTool
 from openharness.tools.list_mcp_resources_tool import ListMcpResourcesTool
 from openharness.tools.lsp_tool import LspTool
 from openharness.tools.mcp_auth_tool import McpAuthTool
@@ -39,6 +40,7 @@ from openharness.tools.task_update_tool import TaskUpdateTool
 from openharness.tools.team_create_tool import TeamCreateTool
 from openharness.tools.team_delete_tool import TeamDeleteTool
 from openharness.tools.todo_write_tool import TodoWriteTool
+from openharness.tools.tfidf_tool import TfidfExtractTool
 from openharness.tools.tool_search_tool import ToolSearchTool
 from openharness.tools.web_fetch_tool import WebFetchTool
 from openharness.tools.web_search_tool import WebSearchTool
@@ -51,6 +53,8 @@ def create_default_tool_registry(mcp_manager=None) -> ToolRegistry:
         BashTool(),
         AskUserQuestionTool(),
         BM25RetrieveTool(),
+        TfidfExtractTool(),
+        IndexExploreTool(),
         FileReadTool(),
         FileWriteTool(),
         FileEditTool(),

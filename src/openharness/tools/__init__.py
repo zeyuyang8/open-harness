@@ -4,6 +4,7 @@ from openharness.tools.ask_user_question_tool import AskUserQuestionTool
 from openharness.tools.agent_tool import AgentTool
 from openharness.tools.bash_tool import BashTool
 from openharness.tools.base import BaseTool, ToolExecutionContext, ToolRegistry, ToolResult
+from openharness.tools.bm25_retrieve_tool import BM25RetrieveTool
 from openharness.tools.brief_tool import BriefTool
 from openharness.tools.config_tool import ConfigTool
 from openharness.tools.cron_create_tool import CronCreateTool
@@ -49,6 +50,7 @@ def create_default_tool_registry(mcp_manager=None) -> ToolRegistry:
     for tool in (
         BashTool(),
         AskUserQuestionTool(),
+        BM25RetrieveTool(),
         FileReadTool(),
         FileWriteTool(),
         FileEditTool(),

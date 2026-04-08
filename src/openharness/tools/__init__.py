@@ -20,6 +20,7 @@ from openharness.tools.file_read_tool import FileReadTool
 from openharness.tools.file_write_tool import FileWriteTool
 from openharness.tools.glob_tool import GlobTool
 from openharness.tools.grep_tool import GrepTool
+from openharness.tools.grep_corpus_tool import GrepCorpusTool
 from openharness.tools.index_explore_tool import IndexExploreTool
 from openharness.tools.list_mcp_resources_tool import ListMcpResourcesTool
 from openharness.tools.lsp_tool import LspTool
@@ -55,6 +56,7 @@ def create_default_tool_registry(mcp_manager=None) -> ToolRegistry:
         BM25RetrieveTool(),
         TfidfExtractTool(),
         IndexExploreTool(),
+        GrepCorpusTool(),
         FileReadTool(),
         FileWriteTool(),
         FileEditTool(),
